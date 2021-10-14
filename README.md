@@ -22,10 +22,10 @@
 - Fork项目
 - 在个人设置开发者设置里面创建个人访问令牌，固件编译好发布需要用到，否则无法发布，一般一次编译要3~5小时
 - 点击Actions → 要编译的Workflows → Run workflow → Run workflow 
-- Mini OpenWrt Mini精简版编译和打包
-- Plus OpenWrt Plus常用版编译和打包
-- Package 用编译好的临时固件进行打包，一般是在内核更新需要单独打包的时候运行
-- Make Config 生成config文件，将自己简单的config文件生成更全面的config文件
+- `Mini OpenWrt` Mini精简版编译和打包
+- `Plus OpenWrt` Plus常用版编译和打包
+- `Package` 用编译好的临时固件进行打包，一般是在内核更新需要单独打包的时候运行
+- `Make Config` 生成config文件，将自己简单的config文件生成更全面的config文件
 
 ## 感谢 ❤️
 
