@@ -1,7 +1,7 @@
 ## 说明
 
 - 本项目使用 Github Actions 下载 [Lean](https://github.com/coolsnowwolf/lede) 的 `Openwrt` 源码仓库，进行云编译打包。
-- 基于flippy大的打包脚本，适配的机型有：`微加云`、`贝壳云`、`我家云`、`N1`、`S905x3`（包括常见的`hk1`、`h96`、`x96`等盒子）、`章鱼星球`、`s922x`（目前支持`GT-King`、`GT-King Pro`两款盒子） 等！
+- 基于flippy大的打包脚本，适配的机型有：`微加云``贝壳云`、`我家云`、`N1`、`S905x3`（包括常见的`hk1`、`h96`、`x96`等盒子）、`章鱼星球`、`s922x`（目前支持`GT-King`、`GT-King Pro`两款盒子） 等！
 - 本项目使用定时编译（北京时间每周六凌晨0点开始自动触发编译）。
 - Releases中的直刷固件分为[***MINI版***](https://github.com/hhaibo/ARMv8-OpenWrt/releases/tag/ARMv8_MINI) 和[***PLUS版***](https://github.com/hhaibo/ARMv8-OpenWrt/releases/tag/ARMv8_PLUS)，MINI版主要适合科学上网为主要需求的用户，PLUS版是正常多插件版本集成各种常用插件。
 - 固件默认IP：`10.10.10.11` 默认密码：`password`
