@@ -20,7 +20,7 @@
 
 ## 喜欢的可以给个star。要自己编译独一无二的可以fork。感谢各位。
 1. fork项目
-2. 在个人设置开发者设置里面创建个人访问令牌，Github发布需要用到。，一般一次编译要3~5小时
+2. 在个人设置开发者设置里面创建个人访问令牌，Github发布需要用到，一般一次编译要3~5小时
 3. 点击Actions -> Workflows -> Run workflow -> Run workflow 
 4. Mini OpenWrt Mini精简版编译和打包
 5. Plus OpenWrt Plus常用版编译和打包
