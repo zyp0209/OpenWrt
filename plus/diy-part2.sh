@@ -30,8 +30,8 @@ git clone https://github.com/small-5/luci-app-adblock-plus package/luci-app-adbl
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
 git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 git clone https://github.com/project-lede/luci-app-godproxy package/luci-app-godproxy
+svn co https://github.com/gd0772/package/trunk/luci-app-eqos package/luci-app-eqos
 svn co https://github.com/kiddin9/openwrt-bypass/trunk/luci-app-bypass package/luci-app-bypass
-svn co https://github.com/281677160/openwrt-package/trunk/feeds/luci/applications/luci-app-eqos package/luci-app-eqos
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 
 # 科学上网插件依赖
