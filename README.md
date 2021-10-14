@@ -7,7 +7,7 @@
 - 固件默认IP：`10.10.10.11` 默认密码：`password`
 - 刷机和升级方法请参考f大这两个帖子：[➦旧帖](https://www.right.com.cn/forum/thread-4055451-1-1.html) 和 [➦新帖](https://www.right.com.cn/forum/thread-4076037-1-1.html)
 - U盘写入EMMC：登录OpenWrt → 系统 → 晶晨宝盒 → 安装OpenWrt → 选择型号 → 安装
-- 升级OpenWrt：登录OpenWrt → 系统 → 晶晨宝盒 → 手动上传更新，上传你下载的固件 ***或者*** 在线下载更新 里面默认设置了相对应版本连接直接升级即可
+- 升级OpenWrt：登录OpenWrt → 系统 → 晶晨宝盒 → 手动上传更新 → 上传你下载的固件 ***或者*** 在线下载更新 → 默认设置了相对应版本连接直接升级即可
 
 ## 声明
 - 刷机有风险需自行承担！我只是出于个人爱好学习编译创建的这个项目，小白刷此固件请三思，本人不承担任何后果和技术支持！
@@ -17,6 +17,15 @@
  
 ## Plus版插件预览
  ![applist](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/plus.jpg)
+
+## 喜欢的可以给个star。要自己编译独一无二的可以fork。感谢各位。
+1. fork项目
+2. 在个人设置开发者设置里面创建个人访问令牌，Github发布需要用到。，一般一次编译要3~5小时
+3. 点击Actions -> Workflows -> Run workflow -> Run workflow 
+4. Mini OpenWrt Mini精简版编译和打包
+5. Plus OpenWrt Plus常用版编译和打包
+6. Package 用编译好的临时固件进行打包，一般是在内核更新需要单独打包的时候运行
+7. Make Config 生成config文件，将自己简单的config文件生成更全面的config文件
 
 ## 感谢 ❤️
 
