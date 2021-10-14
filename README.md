@@ -18,7 +18,8 @@
 ## Plus版插件预览
  ![applist](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/plus.jpg)
 
-## 喜欢的可以给个Star，要自己编译独一无二的可以Fork，使用说明在下方感谢各位。
+## 喜欢的可以给个Star，要自己编译独一无二的可以Fork，感谢各位！
+本项目使用说明
 - 右上角点击自己头像 → Settings → Developer settings → Personal access tokens里面创建个人访问令牌，固件发布会调用，否则无法发布
 - Fork本项目
 - 点击Actions → 要编译的Workflows → Run workflow → Run workflow 一般一次编译要3~5小时
