@@ -19,7 +19,7 @@
  ![applist](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/plus.jpg)
 
 ## 喜欢的可以给个Star，要自己编译独一无二的可以Fork，使用说明在下方感谢各位。
-- 右上角点击自己头像 → settings → Developer settings → Personal access tokens里面创建个人访问令牌，固件编译好发布需要用到，否则无法发布
+- 右上角点击自己头像 → settings → Developer settings → Personal access tokens里面创建个人访问令牌，固件发布会调用，否则无法发布
 - Fork本项目
 - 点击Actions → 要编译的Workflows → Run workflow → Run workflow 一般一次编译要3~5小时
 - `Mini OpenWrt` Mini精简版编译和打包
