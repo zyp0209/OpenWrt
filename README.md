@@ -13,10 +13,10 @@
 - 刷机有风险需自行承担！我只是出于个人爱好学习编译创建的这个项目，小白刷此固件请三思，本人不承担任何后果和技术支持！
 
 ## Mini版插件预览
- ![applist](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/mini.jpg)
+ ![插件预览](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/mini.jpg)
  
 ## Plus版插件预览
- ![applist](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/plus.jpg)
+ ![插件预览](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/plus.jpg)
 
 ## 喜欢的可以给个Star，要自己编译独一无二的可以Fork，感谢各位！
 本项目使用说明
