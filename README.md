@@ -18,8 +18,8 @@
 ## Plus版插件预览
  ![applist](https://github.com/hhaibo/ARMv8-OpenWrt/blob/main/imgs/plus.jpg)
 
-## 喜欢的可以给个star，要自己编译独一无二的可以fork，感谢各位。
-- fork项目的使用说明
+## 喜欢的可以给个Star，要自己编译独一无二的可以Fork，使用说明在下方感谢各位。
+- Fork项目
 - 在个人设置开发者设置里面创建个人访问令牌，固件编译好发布需要用到，否则无法发布，一般一次编译要3~5小时
 - 点击Actions → 要编译的Workflows → Run workflow → Run workflow 
 - Mini OpenWrt Mini精简版编译和打包
