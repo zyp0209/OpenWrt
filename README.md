@@ -33,5 +33,5 @@
 - [ophub](https://github.com/ophub/op)
 - [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)
 - [breakings](https://github.com/breakings/OpenWrt)
-- [Lienol/openwrt](https://github.com/Lienol/openwrt)
+- [mingxiaoyu](https://github.com/mingxiaoyu/N1Openwrt)
 - [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)
