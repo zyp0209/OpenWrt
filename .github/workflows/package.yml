@@ -90,7 +90,7 @@ jobs:
         tag: ARMv8_${{ env.VERSION }}
         token: ${{ secrets.GITHUB_TOKEN }}
         body: |
-          This is OpenWrt firmware for Armvirt 6
+          This is OpenWrt firmware for Armvirt 64
           * ${{ env.EXPLAIN }}
           默认IP：10.10.10.11 默认密码：password
           安装到EMMC：系统 → 晶晨宝盒 → 安装OpenWrt → 选择型号 → 安装
