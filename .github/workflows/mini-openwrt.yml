@@ -182,8 +182,8 @@ jobs:
           This is OpenWrt firmware for Armvirt 64
           * 此为精简版，集成科学上网和去广告插件，如需多插件版请到➦[PLUS](https://github.com/hhaibo/ARMv8-OpenWrt/releases/tag/ARMv8_PLUS)
           默认IP：10.10.10.11 默认密码：password
-          安装到EMMC：登录OpenWrt → 系统 → 晶晨宝盒 → 安装OpenWrt → 选择型号 → 安装
-          升级OpenWrt：登录OpenWrt → 系统 → 晶晨宝盒 → 手动上传更新 或者 在线下载更新
+          安装到EMMC：系统 → 晶晨宝盒 → 安装OpenWrt → 选择型号 → 安装
+          升级OpenWrt：系统 → 晶晨宝盒 → 手动上传更新 或 在线下载更新
           当前使用版本:【编译前的最后一次➦[主源码](https://github.com/coolsnowwolf/lede)更新记录】
           常见问题及注意事项请参考恩山F大➦[最新帖](https://www.right.com.cn/forum/thread-4076037-1-1.html)
           ${{ env.useVersionInfo }}
@@ -192,7 +192,7 @@ jobs:
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 1
-        keep_minimum_runs: 3
+        keep_minimum_runs: 2
 
     - name: Remove old releases
       uses: dev-drprasad/delete-older-releases@v0.2.0
