@@ -12,10 +12,6 @@
 # 修改默认IP
 sed -i 's/192.168.1.1/10.10.10.11/g' package/base-files/files/bin/config_generate
 
-# cpufreq
-sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' package/lean/luci-app-cpufreq/Makefile
-sed -i 's/services/system/g' package/lean/luci-app-cpufreq/luasrc/controller/cpufreq.lua
-
 # 移除冲突软件包
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-netdata
@@ -71,12 +67,6 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns packa
 sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.2021.34/' feeds/packages/net/smartdns/Makefile
 sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=756029f5e9879075c042030bd3aa3db06d700270/' feeds/packages/net/smartdns/Makefile
 sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=c2979d956127946861977781beb3323ad9a614ae55014bc99ad39beb7a27d481/' feeds/packages/net/smartdns/Makefile
-
-# 晶晨宝盒
-svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
-sed -i "s|https.*/OpenWrt|https://github.com/hhaibo/OpenWrt|g" package/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|opt/kernel|https://github.com/ophub/flippy-kernel/tree/main/library|g" package/luci-app-amlogic/root/etc/config/amlogic
-sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
 
 # 阿里云盘
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav package/aliyundrive-webdav
