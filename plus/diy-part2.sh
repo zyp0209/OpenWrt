@@ -98,7 +98,6 @@ sed -i 's/"CPU 性能优化调节"/"CPU性能调节"/g' `grep "CPU 性能优化�
 sed -i 's/"Argon 主题设置"/"Argon 设置"/g' `grep "Argon 主题设置" -rl ./`
 sed -i 's/"阿里云盘 WebDAV"/"阿里云盘"/g' `grep "阿里云盘 WebDAV" -rl ./`
 sed -i 's/"USB 打印服务器"/"USB打印"/g' `grep "USB 打印服务器" -rl ./`
-sed -i 's/"BaiduPCS Web"/"百度网盘"/g' `grep "BaiduPCS Web" -rl ./`
 sed -i 's/"实时流量监测"/"流量监测"/g' `grep "实时流量监测" -rl ./`
 sed -i 's/"UPnP"/"UPnP 设置"/g' `grep "UPnP" -rl ./`
 
