@@ -21,8 +21,6 @@ rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-netdata
 rm -rf feeds/packages/admin/netdata
 rm -rf package/lean/luci-app-jd-dailybonus
-rm -rf package/lean/aliyundrive-webdav
-rm -rf package/lean/luci-app-aliyundrive-webdav
 
 # 添加额外软件包
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
