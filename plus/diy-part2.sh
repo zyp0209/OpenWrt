@@ -94,11 +94,6 @@ sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav package/aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
 
-# 应用过滤
-svn co https://github.com/destan19/OpenAppFilter/trunk/luci-app-oaf package/luci-app-oaf
-svn co https://github.com/destan19/OpenAppFilter/trunk/open-app-filter package/open-app-filter
-svn co https://github.com/destan19/OpenAppFilter/trunk/oaf package/oaf
-
 # 修改插件名字
 sed -i 's/"挂载 SMB 网络共享"/"挂载网络共享"/g' `grep "挂载 SMB 网络共享" -rl ./`
 sed -i 's/"CPU 性能优化调节"/"CPU性能调节"/g' `grep "CPU 性能优化调节" -rl ./`
