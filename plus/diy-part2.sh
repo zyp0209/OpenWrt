@@ -99,5 +99,14 @@ sed -i 's/"USB 打印服务器"/"USB打印"/g' `grep "USB 打印服务器" -rl .
 sed -i 's/"实时流量监测"/"流量监测"/g' `grep "实时流量监测" -rl ./`
 sed -i 's/"UPnP"/"UPnP 设置"/g' `grep "UPnP" -rl ./`
 
+# 调整V2ray服务到VPN菜单
+sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/controller/*.lua
+sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
+sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
+
+# 调整阿里云盘到储存菜单
+sed -i 's/services/nas/g' package/lean/luci-app-aliyundrive-webdav/luasrc/controller/*.lua
+sed -i 's/services/nas/g' package/lean/luci-app-aliyundrive-webdav/luasrc/view/aliyundrive-webdav/*.htm
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
