@@ -60,6 +60,13 @@ git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/luc
 git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
+# smartdns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/smartdns-le package/smartdns-le
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
+sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.2021.35/' feeds/packages/net/smartdns/Makefile
+sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=f50e4dd0813da9300580f7188e44ed72a27ae79c/' feeds/packages/net/smartdns/Makefile
+sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=b4d825a48884101f647cd594f00b714a2d09ac419b958ee0317d302fd31b0038/' feeds/packages/net/smartdns/Makefile
+
 # 晶晨宝盒
 svn co https://github.com/ophub/luci-app-amlogic/trunk/luci-app-amlogic package/luci-app-amlogic
 sed -i "s|https.*/OpenWrt|https://github.com/hhaibo/OpenWrt|g" package/luci-app-amlogic/root/etc/config/amlogic
