@@ -67,7 +67,7 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
 # smartdns
-svn co https://github.com/kenzok8/openwrt-packages/trunk/smartdns-le package/smartdns-le
+svn co https://github.com/kiddin9/openwrt-packages/trunk/smartdns-le package/smartdns-le
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
 sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.2021.34/' feeds/packages/net/smartdns/Makefile
 sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=756029f5e9879075c042030bd3aa3db06d700270/' feeds/packages/net/smartdns/Makefile
