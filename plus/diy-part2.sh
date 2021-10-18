@@ -40,8 +40,6 @@ git clone https://github.com/sirpdboy/luci-app-advanced package/luci-app-advance
 svn co https://github.com/kiddin9/openwrt-bypass/trunk/luci-app-bypass package/luci-app-bypass
 svn co https://github.com/gd0772/package/trunk/luci-app-eqos package/luci-app-eqos
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ddnsto package/luci-app-ddnsto
-svn co https://github.com/kenzok8/openwrt-packages/trunk/ddnsto package/ddnsto
 
 # 科学上网插件依赖
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
