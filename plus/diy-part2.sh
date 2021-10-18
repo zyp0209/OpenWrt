@@ -88,15 +88,6 @@ sed -i "s|ARMv8|ARMv8_PLUS|g" package/luci-app-amlogic/root/etc/config/amlogic
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav package/aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
 
-# 修改插件名字
-sed -i 's/"挂载 SMB 网络共享"/"挂载网络共享"/g' `grep "挂载 SMB 网络共享" -rl ./`
-sed -i 's/"CPU 性能优化调节"/"CPU性能调节"/g' `grep "CPU 性能优化调节" -rl ./`
-sed -i 's/"Argon 主题设置"/"Argon 设置"/g' `grep "Argon 主题设置" -rl ./`
-sed -i 's/"阿里云盘 WebDAV"/"阿里云盘"/g' `grep "阿里云盘 WebDAV" -rl ./`
-sed -i 's/"USB 打印服务器"/"USB打印"/g' `grep "USB 打印服务器" -rl ./`
-sed -i 's/"实时流量监测"/"流量监测"/g' `grep "实时流量监测" -rl ./`
-sed -i 's/"UPnP"/"UPnP 设置"/g' `grep "UPnP" -rl ./`
-
 # 调整V2ray服务到VPN菜单
 sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/controller/*.lua
 sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
@@ -105,6 +96,15 @@ sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/view/v2ray_s
 # 调整阿里云盘到储存菜单
 sed -i 's/services/nas/g' package/lean/luci-app-aliyundrive-webdav/luasrc/controller/*.lua
 sed -i 's/services/nas/g' package/lean/luci-app-aliyundrive-webdav/luasrc/view/aliyundrive-webdav/*.htm
+
+# 修改插件名字
+sed -i 's/"挂载 SMB 网络共享"/"挂载网络共享"/g' `grep "挂载 SMB 网络共享" -rl ./`
+sed -i 's/"CPU 性能优化调节"/"CPU性能调节"/g' `grep "CPU 性能优化调节" -rl ./`
+sed -i 's/"Argon 主题设置"/"Argon 设置"/g' `grep "Argon 主题设置" -rl ./`
+sed -i 's/"阿里云盘 WebDAV"/"阿里云盘"/g' `grep "阿里云盘 WebDAV" -rl ./`
+sed -i 's/"USB 打印服务器"/"USB打印"/g' `grep "USB 打印服务器" -rl ./`
+sed -i 's/"实时流量监测"/"流量监测"/g' `grep "实时流量监测" -rl ./`
+sed -i 's/"UPnP"/"UPnP 设置"/g' `grep "UPnP" -rl ./`
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
