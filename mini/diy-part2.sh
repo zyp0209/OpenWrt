@@ -77,7 +77,6 @@ sed -i "s|ARMv8|ARMv8_MINI|g" package/luci-app-amlogic/root/etc/config/amlogic
 sed -i 's/"挂载 SMB 网络共享"/"挂载网络共享"/g' `grep "挂载 SMB 网络共享" -rl ./`
 sed -i 's/"CPU 性能优化调节"/"CPU性能调节"/g' `grep "CPU 性能优化调节" -rl ./`
 sed -i 's/"Argon 主题设置"/"Argon 设置"/g' `grep "Argon 主题设置" -rl ./`
-sed -i 's/"UPnP"/"UPnP 设置"/g' `grep "UPnP" -rl ./`
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
