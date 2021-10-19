@@ -13,9 +13,9 @@
 sed -i 's/192.168.1.1/10.10.10.11/g' package/base-files/files/bin/config_generate
 
 # 移除冲突软件包
-rm -rf feeds/packages/admin/netdata
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-netdata
+rm -rf feeds/packages/admin/netdata
 rm -rf package/lean/luci-app-jd-dailybonus
 
 # 添加额外软件包
