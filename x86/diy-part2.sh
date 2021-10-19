@@ -13,6 +13,7 @@
 sed -i 's/192.168.1.1/10.10.10.11/g' package/base-files/files/bin/config_generate
 
 # 移除冲突软件包
+rm -rf feeds/packages/admin/netdata
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-netdata
 rm -rf package/lean/luci-app-jd-dailybonus
@@ -21,12 +22,10 @@ rm -rf package/lean/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
-git clone https://github.com/sirpdboy/luci-app-autotimeset package/luci-app-autotimeset
 git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
-git clone https://github.com/small-5/luci-app-adblock-plus package/luci-app-adblock-plus
 git clone https://github.com/tty228/luci-app-serverchan.git package/luci-app-serverchan
-git clone https://github.com/sirpdboy/luci-app-netdata package/luci-app-netdata
 git clone https://github.com/project-lede/luci-app-godproxy package/luci-app-godproxy
+git clone https://github.com/sirpdboy/luci-app-advanced package/luci-app-advanced
 svn co https://github.com/gd0772/package/trunk/luci-app-eqos package/luci-app-eqos
 svn co https://github.com/kiddin9/openwrt-bypass/trunk/luci-app-bypass package/luci-app-bypass
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
@@ -64,21 +63,30 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
 # smartdns
-svn co https://github.com/garypang13/openwrt-packages/trunk/smartdns-le package/smartdns-le
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-smartdns package/luci-app-smartdns
-sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.2021.34/' feeds/packages/net/smartdns/Makefile
-sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=756029f5e9879075c042030bd3aa3db06d700270/' feeds/packages/net/smartdns/Makefile
-sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=c2979d956127946861977781beb3323ad9a614ae55014bc99ad39beb7a27d481/' feeds/packages/net/smartdns/Makefile
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/smartdns-le package/smartdns-le
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-smartdns package/luci-app-smartdns
+sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.2021.35/' feeds/packages/net/smartdns/Makefile
+sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=f50e4dd0813da9300580f7188e44ed72a27ae79c/' feeds/packages/net/smartdns/Makefile
+sed -i 's/PKG_MIRROR_HASH:=.*/PKG_MIRROR_HASH:=b4d825a48884101f647cd594f00b714a2d09ac419b958ee0317d302fd31b0038/' feeds/packages/net/smartdns/Makefile
 
 # 阿里云盘
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/aliyundrive-webdav package/aliyundrive-webdav
 svn co https://github.com/messense/aliyundrive-webdav/trunk/openwrt/luci-app-aliyundrive-webdav package/luci-app-aliyundrive-webdav
 
+# 中文实时监控
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata package/lean/luci-app-netdata
+svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata feeds/packages/admin/netdata
+
+# 调整V2ray服务到VPN菜单
+sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/controller/*.lua
+sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
+sed -i 's/services/vpn/g' package/lean/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
+
 # 修改插件名字
 sed -i 's/"挂载 SMB 网络共享"/"挂载网络共享"/g' `grep "挂载 SMB 网络共享" -rl ./`
 sed -i 's/"CPU 性能优化调节"/"CPU性能调节"/g' `grep "CPU 性能优化调节" -rl ./`
-sed -i 's/"Argon 主题设置"/"Argon 设置"/g' `grep "Argon 主题设置" -rl ./`
 sed -i 's/"阿里云盘 WebDAV"/"阿里云盘"/g' `grep "阿里云盘 WebDAV" -rl ./`
+sed -i 's/"USB 打印服务器"/"USB 打印"/g' `grep "USB 打印服务器" -rl ./`
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
