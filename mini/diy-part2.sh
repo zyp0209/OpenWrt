@@ -24,7 +24,6 @@ rm -rf package/lean/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
 git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
-git clone https://github.com/sirpdboy/luci-app-advanced package/luci-app-advanced
 git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 
@@ -61,7 +60,6 @@ git clone https://github.com/jerrykuku/luci-app-argon-config package/luci-app-ar
 git clone https://github.com/sirpdboy/luci-theme-opentopd package/luci-theme-opentopd
 
 # smartdns
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/smartdns-le package/smartdns-le
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-smartdns package/luci-app-smartdns
 sed -i 's/PKG_VERSION:=.*/PKG_VERSION:=1.2021.35/' feeds/packages/net/smartdns/Makefile
 sed -i 's/PKG_SOURCE_VERSION:=.*/PKG_SOURCE_VERSION:=f50e4dd0813da9300580f7188e44ed72a27ae79c/' feeds/packages/net/smartdns/Makefile
