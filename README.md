@@ -195,7 +195,7 @@
 ## 编译教程 [![](https://img.shields.io/badge/-项目基本编译教程-FFFFFF.svg)](#编译教程-)
 1. 点击右上角 `Fork`，Fork 本项目到你自己的仓库
 2. 创建个人访问令牌，如果已创建请跳过第三步（固件发布会调用，否则无法发布）
-3. 点击右上角自己头像 → `Settings` → `Developer settings` → `Personal access tokens` → `Generate new token` Note 名字随便写一个，勾选 `repo` 和 `workflow` 点击最下方绿色按钮`Generate token`完成创建
+3. 点击右上角自己头像 → `Settings` → `Developer settings` → `Personal access tokens` → `Generate new token` Note 名字随便写一个，勾选 `repo` 和 `workflow` 点击最下方绿色按钮 `Generate token` 完成创建
 4. 编辑对应文件夹下 `.config` 文件，`luci-app-xxx` 为插件名，结尾 `=y` 为选择，`is not set` 为不选择
 5. 插件对应名称及功能请参考网友帖子：[OpenWrt 编译 LuCI -> Applications 添加插件应用说明-L大](https://www.right.com.cn/forum/thread-3682029-1-1.html)
 6. 如果需要修改默认 IP、添加或删除插件源以及其他自定义设置请在 `diy-part2.sh` 文件中进行修改
