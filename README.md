@@ -15,13 +15,13 @@
 - 固件来源：[![Lean](https://img.shields.io/badge/Lede-Lean-red.svg?style=flat&logo=appveyor)](https://github.com/coolsnowwolf/lede) [![P3TERX](https://img.shields.io/badge/OpenWrt-P3TERX-blueviolet.svg?style=flat&logo=appveyor)](https://github.com/P3TERX/Actions-OpenWrt) [![Sirpdboy](https://img.shields.io/badge/Package-Sirpdboy-orange.svg?style=flat&logo=appveyor)](https://github.com/sirpdboy/sirpdboy-package) [![Haiibo](https://img.shields.io/badge/Build-Haiibo-success.svg?style=flat&logo=appveyor)](https://github.com/haiibo/OpenWrt)
 - 项目使用 Github Actions 拉取 [Lean](https://github.com/coolsnowwolf/lede) 的 `Openwrt` 源码仓库进行云编译
 - 设置定时自动编译（北京时间每天早上6点左右自动触发编译）
-- 固件默认IP地址：`10.10.10.10` 默认密码：`password`
+- 固件默认 IP 地址：`10.10.10.10` 默认密码：`password`
 - 适配的软路由设备有：`X86_64`、`NanoPi_R2C`、`NanoPi_R2S`、`NanoPi_R4S`
-- 适配的ARM盒子设备有：`微加云`、`贝壳云`、`我家云`、`斐讯N1`、`章鱼星球`、`S905x3`（包括常见的`HK1`、`H96`、`X96`等盒子）、`S922x`（目前支持`GT-King`、`GT-King Pro`、`Odroid N2`三款盒子） 
-- ARM盒子固件分为 [Mini版](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_MINI) 和 [Plus版](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_PLUS)，Mini精简版适合科学上网为主要需求的用户，Plus多功能版插件多适合喜欢折腾的用户
-- 仓库编译的固件插件均为最新版本，最新版意味着可能有BUG，如果之前使用稳定，则无需追新
+- 适配的 ARM 盒子设备有：`微加云`、`贝壳云`、`我家云`、`斐讯N1`、`章鱼星球`、`S905x3`（包括常见的 `HK1`、`H96`、`X96` 等盒子）、`S922x`（目前支持 `GT-King`、`GT-King Pro`、`Odroid N2` 三款盒子） 
+- ARM 盒子固件分为 [Mini版](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_MINI) 和 [Plus版](https://github.com/haiibo/OpenWrt/releases/tag/ARMv8_PLUS)，Mini 精简版适合科学上网为主要需求的用户，Plus 多功能版插件多适合喜欢折腾的用户
+- 仓库编译的固件插件均为最新版本，最新版意味着可能有 BUG，如果之前使用稳定，则无需追新
 - 如固件使用有什么问题，可以直接在 [Issues](https://github.com/haiibo/OpenWrt/issues) 内留言，我会根据大家的问题进行修改
-- 喜欢的可以给个Star，感谢各位！想要自己编译固件的请看下方编译教程！
+- 喜欢的可以给个 Star，感谢各位！想要自己编译固件的请看下方编译教程！
 
 
 ## 固件下载 [![](https://img.shields.io/badge/-编译状态及下载链接-FFFFFF.svg)](#固件下载-)
@@ -44,19 +44,19 @@
 
 ## 插件预览 [![](https://img.shields.io/badge/-固件插件及功能预览-FFFFFF.svg)](#插件预览-)
 <details>
-<summary><b>&nbsp;ARM盒子Mini精简版本插件预览</b></summary>
+<summary><b>&nbsp;ARM 盒子 Mini 精简版本插件预览</b></summary>
 <br/>
 <img src="https://cdn.jsdelivr.net/gh/haiibo/OpenWrt/image/mini.jpg"/>
 </details>
 
 <details>
-<summary><b>&nbsp;ARM盒子Plus多功能版插件预览</b></summary>
+<summary><b>&nbsp;ARM 盒子 Plus 多功能版插件预览</b></summary>
 <br/>
 <img src="https://cdn.jsdelivr.net/gh/haiibo/OpenWrt/image/plus.jpg"/>
 </details>
 
 <details>
-<summary><b>&nbsp;X86、R2C、R2S、R4S插件预览</b></summary>
+<summary><b>&nbsp;X86、R2C、R2S、R4S 插件预览</b></summary>
 <br/>
 <details>
 <summary><b>├── 状态</b></summary>
@@ -193,19 +193,19 @@
 
 
 ## 编译教程 [![](https://img.shields.io/badge/-项目基本编译教程-FFFFFF.svg)](#编译教程-)
-1. 点击右上角`Fork`，Fork本项目到你自己的仓库
+1. 点击右上角 `Fork`，Fork 本项目到你自己的仓库
 2. 创建个人访问令牌，如果已创建请跳过第三步（固件发布会调用，否则无法发布）
-3. 点击右上角自己头像 → `Settings` → `Developer settings` → `Personal access tokens` → `Generate new token`Note名字随便写一个，勾选`repo`和`workflow`点击最下方绿色按钮`Generate token`完成创建
-4. 编辑对应文件夹下`.config`文件，`luci-app-xxx`为插件名，结尾`=y`为选择，`is not set`为不选择
+3. 点击右上角自己头像 → `Settings` → `Developer settings` → `Personal access tokens` → `Generate new token` Note 名字随便写一个，勾选 `repo` 和 `workflow` 点击最下方绿色按钮`Generate token`完成创建
+4. 编辑对应文件夹下 `.config` 文件，`luci-app-xxx` 为插件名，结尾 `=y` 为选择，`is not set` 为不选择
 5. 插件对应名称及功能请参考网友帖子：[OpenWrt 编译 LuCI -> Applications 添加插件应用说明-L大](https://www.right.com.cn/forum/thread-3682029-1-1.html)
-6. 如果需要修改默认IP、添加或删除插件源以及其他自定义设置请在`diy-part2.sh`文件中进行修改
-7. 点击`Actions` → `要编译的workflow` → `Run workflow` → `Run workflow`一般一次编译要3~5小时
-8. 编译完成后在仓库主页`Releases`对应Tag标签中查看以及下载
+6. 如果需要修改默认 IP、添加或删除插件源以及其他自定义设置请在 `diy-part2.sh` 文件中进行修改
+7. 点击 `Actions` → `要编译的workflow` → `Run workflow` → `Run workflow` 一般一次编译要3~5小时
+8. 编译完成后在仓库主页 `Releases` 对应 Tag 标签中查看以及下载
 
 
 ## 特别提示 [![](https://img.shields.io/badge/-个人免责声明-FFFFFF.svg)](#特别提示-)
 
-- **因精力有限不提供任何技术支持和教程等相关问题解答，不保证完全无BUG！**
+- **因精力有限不提供任何技术支持和教程等相关问题解答，不保证完全无 BUG！**
 
 - **本人不对任何人因使用本固件所遭受的任何理论或实际的损失承担责任！**
 
