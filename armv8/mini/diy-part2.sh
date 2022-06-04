@@ -18,7 +18,6 @@ sed -i 's/LUCI_DEPENDS.*/LUCI_DEPENDS:=\@\(arm\|\|aarch64\)/g' feeds/luci/applic
 sed -i 's/services/system/g' feeds/luci/applications/luci-app-cpufreq/luasrc/controller/cpufreq.lua
 
 # 移除重复软件包
-rm -rf feeds/packages/admin/netdata
 rm -rf feeds/luci/themes/luci-theme-argon
 rm -rf feeds/luci/themes/luci-theme-netgear
 rm -rf feeds/luci/applications/luci-app-netdata
@@ -26,9 +25,9 @@ rm -rf feeds/luci/applications/luci-app-wrtbwmon
 rm -rf feeds/luci/applications/luci-app-dockerman
 
 # 添加额外软件包
-#git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
+git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
-#git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
+git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr
 git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 git clone https://github.com/esirplayground/luci-app-poweroff package/luci-app-poweroff
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
@@ -55,13 +54,13 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/v2ray-core package/v2
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk/dns2tcp package/dns2tcp
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy package/naiveproxy
 svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust package/shadowsocks-rust
-# svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/shadowsocksr-libev
+svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev package/shadowsocksr-libev
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus package/luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/simple-obfs package/simple-obfs
 svn co https://github.com/fw876/helloworld/trunk/trojan package/trojan
 
 # Themes
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-edge package/luci-theme-edge
+svn co https://github.com/haiibo/packages/trunk/luci-theme-edge package/luci-theme-edge
 svn co https://github.com/rosywrt/luci-theme-rosy/trunk/luci-theme-rosy package/luci-theme-rosy
 svn co https://github.com/haiibo/packages/trunk/luci-theme-darkmatter package/luci-theme-darkmatter
 svn co https://github.com/haiibo/packages/trunk/luci-theme-atmaterial package/luci-theme-atmaterial
@@ -81,7 +80,6 @@ sed -i "s|ARMv8|ARMv8_MINI|g" package/luci-app-amlogic/root/etc/config/amlogic
 
 # 实时监控
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-netdata package/luci-app-netdata
-svn co https://github.com/sirpdboy/sirpdboy-package/trunk/netdata package/netdata
 
 # 流量监控
 svn co https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-wrtbwmon package/luci-app-wrtbwmon
@@ -102,7 +100,7 @@ find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/PKG_SOURCE_U
 
 # 修改插件名字
 sed -i 's/"Argon 主题设置"/"Argon 设置"/g' `grep "Argon 主题设置" -rl ./`
-sed -i 's/"Docker"/"Docker "/g' `grep "Docker" -rl ./`
+# sed -i 's/"Docker"/"Docker 容器"/g' `grep "Docker" -rl ./`
 sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
 sed -i 's/"UPnP"/"UPnP 设置"/g' `grep "UPnP" -rl ./`
 
